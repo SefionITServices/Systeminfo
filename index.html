@@ -26,8 +26,14 @@
 </div>
   </body>
   <script>
-    console.log(process);
+    var maca = '';
     var total = process.getSystemMemoryInfo().total;
+    var macaddress = require('macaddress');
+    macaddress.one(function (err, mac) {
+  //console.log("Mac address for this host: %s", mac);
+  maca = maca+mac;
+});
+
     let output = `
 <h3 class="page-header">App Information</h3>
 <ul class="list-group">
@@ -45,6 +51,7 @@
 <ul class="list-group">
     <li class="list-group-item"><small>Total Memory:</small>  ${total} </li>
     <li class="list-group-item"><small>Free Memory:</small>  ${process.getSystemMemoryInfo().free}</li>
+    <li class="list-group-item"><small>Free Memory:</small>  ${maca}</li>
 
 </ul>
     `

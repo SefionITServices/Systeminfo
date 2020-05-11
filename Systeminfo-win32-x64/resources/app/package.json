@@ -1,0 +1,25 @@
+
+{
+  "name": "Systeminfo",
+  "version": "1.0.0",
+  "description": "System information",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Sefion"
+  ],
+  "author": "Sefion IT Services",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^8.2.5"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
+  },
+  "scripts": {
+  "pack": "electron-builder --dir",
+  "dist": "electron-builder"
+}
+}
